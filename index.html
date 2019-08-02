@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel=“stylesheet” href=“https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css”/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -21,7 +22,7 @@
       <div class="info">
         <h1>For your house</h1>
         <p>Find all that you already want for your house</p>
-        <button class="nav-link" href="#">Browse our categories</b>
+        <a class="nav-link" href="#">Browse our categories</b>
       </div>
     </div>
     <div class="card"><img class="nav-images" src="./images/right.png" alt="">
@@ -38,10 +39,24 @@
           <button>Single</button>
           <button>Married</button>
           <button>Family</button>
-          <button>Divorced</button>
+          <button id="user-nav2">Divorced</button>
           <button>Widow</button>
         </div>
-          <a id="user-nav" href="#" class="nav-link"></a>
+        </div>
+        <div id="third-info" class="hide">
+          <p>Ok, you got divorced.</p>
+          <p>Tell us more about your need</p>
+          <p>What's your current living status?</p>
+          <div class="flex-col">
+          <button>Furniture</button>
+          <button>Garden</button>
+          <button>Household Goods</button>
+          <button>Decorations and Textiles</button>
+          <button>To Shine</button>
+          <button>Infant</button>
+          <button>Kitchens</button>
+        </div>
+          <a id="user-nav" href="#" class="nav-link">Next</a>
         </div>
       </div>
     </div>
@@ -120,15 +135,6 @@
       <img id="footer-logo" src="./images/logo.png" alt="">
       <p class="social-media">©2019 XXXLutz KG</p>
      </div>
+     <script src="main.js"></script>
 </body>
-
-<script>
-const a = document.getElementById('user-nav');
-a.addEventListener('click', ()=>{
-  let first = document.getElementById("first-info");
-  first.classList.add("hide");
-  let second = document.getElementById("second-info");
-  second.classList.add("show");
-})
-</script>
 </html>     
