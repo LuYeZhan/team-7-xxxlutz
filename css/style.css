@@ -45,7 +45,7 @@ section{
   background-color:black;
 }
 
-.img-left:hover .overlay {
+.nav-images:hover .overlay {
   opacity: 1;
 }
 
@@ -63,13 +63,15 @@ article{
 
 .price{
   float: right;
-  color: red;
+  color: rgb(226, 0, 26);
 }
 
 .item{
   text-align: left;
   font-weight: bold;
 }
+
+
 
 nav{
   display: flex;
@@ -89,10 +91,13 @@ main{
   height: 100%;
 }
 
+.nav-images{
+  width: 100%;
+ 
+}
+
 .img-left {
   width: 50%;
-  background-image: url("../images/left.png");
-  height: 600px;
   background-position: center center;
 }
 
@@ -102,17 +107,31 @@ main{
 
 .img-right {
   width: 50%;
-  background-image: url("../images/right.png");
-  height: 600px;
   background-position: center center;
 }
 
-.img-right:hover{
+.imgtext{
+  display: none;
+  position: absolute;
+  z-index: 4;
+}
+
+.img-left:hover img{
   filter: blur(3px);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.img-left:hover img{
+  transition: 0.5s;
+  -webkit-opacity: 1;
+  opacity: 0.8;
 }
 
 .img-right:hover{
+  transition: 0.5s;
   filter: blur(3px);
+  opacity: 0.8;
 }
 
 .container{
@@ -122,11 +141,77 @@ main{
 
 }
 
-.search-bar{
+.search{
   max-width: 900px;
   width: 90%;
   height: 50px;
+  transition: transform 250ms ease-in-out;
+
+  font-size: 14px;
+
+  line-height: 18px;
+
+  
+
+  color: #575756;
+
+  background-color: transparent;
+
+/*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+
+
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+
+  background-size: 18px 18px;
+
+  background-position: 95% center;
+
+
+
+  border: 1px solid #575756;
+
+  transition: all 250ms ease-in-out;
+
+  backface-visibility: hidden;
+
+  transform-style: preserve-3d;
+
 }
+
+​
+
+.search::placeholder {
+
+      color: rgba(87, 87, 86, 0.8);
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+
+  }
+
+​
+
+.search:hover,
+
+  .search:focus {
+
+      padding: 12px 0;
+
+      outline: 0;
+
+      border: 1px solid transparent;
+
+      border-bottom: 1px solid #575756;
+
+     
+
+      background-position: 100% center;
+
+  }
 
 footer{
   display: flex;
@@ -170,3 +255,94 @@ ul{
     display: none;
   }
 }
+
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+}
+
+.card {
+  width: 50%;
+  height: 50%;
+  padding: 2rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+.card:hover:before {
+  opacity: 1;
+}
+.card:hover .info {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card .info {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  transition: 0.5s;
+}
+.card .info h1 {
+  margin: 0px;
+}
+.card .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.card .info button {
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.card .info button:hover {
+  background: dodgerblue;
+  color: white;
+}
+
+a:visited {
+  color: whitesmoke;
+}
+
+.nav-link{
+  color: white;
+  text-decoration: underline;
+}
+
