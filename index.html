@@ -21,14 +21,28 @@
       <div class="info">
         <h1>For your house</h1>
         <p>Find all that you already want for your house</p>
-        <a class="nav-link" href="#">Browse our categories</a>
+        <button class="nav-link" href="#">Browse our categories</b>
       </div>
     </div>
     <div class="card"><img class="nav-images" src="./images/right.png" alt="">
       <div class="info">
+        <div id="first-info">
         <h1>For your needs</h1>
         <p>Let us guide you to the best choices for you</p>
-        <a href="#" class="nav-link">Browse our categories</a>
+        <a id="user-nav" href="#" class="nav-link">Try our user centered navigation</a>
+      </div>
+      <div id="second-info" class="hide">
+          <h2>Tell us a bit about yourself</h2>
+          <p>What's your current living status?</p>
+          <div class="flex-col">
+          <button>Single</button>
+          <button>Married</button>
+          <button>Family</button>
+          <button>Divorced</button>
+          <button>Widow</button>
+        </div>
+          <a id="user-nav" href="#" class="nav-link"></a>
+        </div>
       </div>
     </div>
   </div>
@@ -107,4 +121,14 @@
       <p class="social-media">©2019 XXXLutz KG</p>
      </div>
 </body>
+
+<script>
+const a = document.getElementById('user-nav');
+a.addEventListener('click', ()=>{
+  let first = document.getElementById("first-info");
+  first.classList.add("hide");
+  let second = document.getElementById("second-info");
+  second.classList.add("show");
+})
+</script>
 </html>     
